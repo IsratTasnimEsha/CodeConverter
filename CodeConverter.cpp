@@ -27,23 +27,24 @@ using namespace std;
 st from, to;
 bool valid=true;
 
-int to_bcd_xs3(st number)
-{
-    ll temp, x_or, k=0;
+int to_bcd_xs3(st number) {
+    ll temp, k = 0;
     ll decimal[500];
-    f(0, i, number.size()){
-        temp=number[i]-'0';
-        if(to=="xs3") temp+=3;
-        fr(4, j, 0){
-            if(temp>=pow(2, j)){
-                temp-=pow(2, j);
-                decimal[k++]=1;
+    f(0, i, number.size()) {
+        temp = number[i] - '0';
+        if (to == "xs3") temp += 3;
+        fr(4, j, 0) {
+            if (temp >= pow(2, j)) {
+                temp -= pow(2, j);
+                decimal[k++] = 1;
+            } else {
+                decimal[k++] = 0;
             }
-            else decimal[k++]=0;
         }
     }
     f(0, i, k) ct(decimal[i]);
 }
+
 
 int from_bcd_xs3(st number)
 {
@@ -117,17 +118,33 @@ int from_gray(st number)
 
 int main()
 {
-    ct("This program can convert:"<<endl<<"\t- ascii value to character"<<endl<<"\t- character to ascii value"<<endl);
-    ct("\t- decimal to BCD"<<endl<<"\t- BCD to decimal"<<endl<<"\t- decimal to XS3"<<endl<<"\t- XS3 to decimal"<<endl);
-    ct("\t- decimal to gray"<<endl<<"\t- gray code to decimal"<<endl<<"\t- binary to gray code"<<endl<<"\t- gray code to binary");
+    ct("This program can convert:"<<endl);
+    ct("\t- ascii value to character"<<endl);
+    ct("\t- character to ascii value"<<endl);
+    ct("\t- decimal to BCD"<<endl);
+    ct("\t- BCD to decimal"<<endl);
+    ct("\t- decimal to XS3"<<endl);
+    ct("\t- XS3 to decimal"<<endl);
+    ct("\t- decimal to gray"<<endl);
+    ct("\t- gray code to decimal"<<endl);
+    ct("\t- binary to gray code"<<endl);
+    ct("\t- gray code to binary");
     bye;
-    ct("(Only for integer numbers.)");
+    ct("(Only for integer numbers)");
     bye, bye;
-    ct("# Use char for character, asc for ascii, dec for decimal, bin for binary, bcd for BCD, xs3 for XS3 and gray for gray code.");
+    ct("# Use"<<endl);
+    ct("   - char for character,"<<endl);
+    ct("   - asc for ascii,"<<endl);
+    ct("   - dec for decimal,"<<endl);
+    ct("   - bin for binary,"<<endl);
+    ct("   - bcd for BCD,"<<endl);
+    ct("   - xs3 for XS3"<<endl);
+    ct("   - gray for gray code.");
     bye, bye;
     ll t=0;
     w(1){
         t++;
+        valid=true;
         ct("Case-"<<t);
         bye;
         ct("From: ");
@@ -141,7 +158,7 @@ int main()
                 ct("Ans: ");
                 ct((ll)character);
             }
-            if(from=="asc" && to=="char"){
+            elif(from=="asc" && to=="char"){
                 ct("Enter ascii value: ");
                 cll(ascii_value);
                 ct("Ans: ");
