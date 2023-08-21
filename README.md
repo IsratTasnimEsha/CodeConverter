@@ -57,3 +57,9 @@ Screenshot showcasing some examples of valid calculation using the program's ope
 ## Contributing
 
 Contributions are welcome! If you find any issues or have suggestions, please create a pull request.
+
+## Author
+
+**Israt Tasnim Esha**  
+*Department of Computer Science and Engineering*  
+*Khulna University of Engineering and Technology*
