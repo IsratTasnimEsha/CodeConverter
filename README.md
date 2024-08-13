@@ -61,5 +61,4 @@ Contributions are welcome! If you find any issues or have suggestions, please cr
 ## Author
 
 **Israt Tasnim Esha**  
-*Department of Computer Science and Engineering*  
-*Khulna University of Engineering and Technology*
+**Year:** 2020
